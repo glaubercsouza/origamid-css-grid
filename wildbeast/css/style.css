@@ -17,6 +17,7 @@ a {
 
 img {
   display: block;
+  width: 100%;
   max-width: 100%;
   border-radius: 5px;
 }
@@ -31,6 +32,30 @@ img {
   "sidenav content anuncios"
   "footer footer footer"
   ;
+}
+
+@media (max-width: 1200px) {
+  .estrutura {
+    grid-template-areas: 
+      "header header header"
+      "sidenav content content"
+      "sidenav anuncios anuncios"
+      "footer footer footer"
+    ;
+  }
+}
+
+@media (max-width: 760px) {
+  .estrutura {
+    grid-template-columns: 100%;
+    grid-template-areas: 
+    "header"
+    "sidenav"
+    "content"
+    "anuncios"
+    "footer"
+    ;
+  }
 }
 
 /* Header */
