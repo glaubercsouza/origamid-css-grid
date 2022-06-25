@@ -1,10 +1,15 @@
-body, p, h1, ul, li, blockquote {
+body,
+p,
+h1,
+ul,
+li,
+blockquote {
   padding: 0px;
   margin: 0px;
 }
 
 body {
-  font-family: 'Vollkorn', Georgia, serif;
+  font-family: "Vollkorn", Georgia, serif;
 }
 
 li {
@@ -18,7 +23,6 @@ a {
 img {
   display: block;
   width: 100%;
-  max-width: 100%;
   border-radius: 5px;
 }
 
@@ -27,34 +31,31 @@ img {
 .estrutura {
   display: grid;
   grid-template-columns: minmax(160px, 1fr) 3fr 300px;
-  grid-template-areas: 
-  "header header header"
-  "sidenav content anuncios"
-  "footer footer footer"
-  ;
+  grid-template-areas:
+    "header header header"
+    "sidenav content anuncios"
+    "footer footer footer";
 }
 
 @media (max-width: 1200px) {
   .estrutura {
-    grid-template-areas: 
+    grid-template-areas:
       "header header header"
       "sidenav content content"
       "sidenav anuncios anuncios"
-      "footer footer footer"
-    ;
+      "footer footer footer";
   }
 }
 
 @media (max-width: 760px) {
   .estrutura {
     grid-template-columns: 100%;
-    grid-template-areas: 
-    "header"
-    "sidenav"
-    "content"
-    "anuncios"
-    "footer"
-    ;
+    grid-template-areas:
+      "header"
+      "sidenav"
+      "content"
+      "anuncios"
+      "footer";
   }
 }
 
@@ -62,7 +63,7 @@ img {
 
 .header {
   grid-area: header;
-  background: linear-gradient(135deg, #8844ee, #B07DFB);
+  background: linear-gradient(135deg, #8844ee, #b07dfb);
   padding: 30px;
   display: grid;
   grid-template-columns: 1fr auto;
@@ -73,7 +74,7 @@ img {
   max-width: 200px;
 }
 
-.header nav ul{
+.header nav ul {
   display: flex;
   flex-wrap: wrap;
 }
@@ -83,13 +84,13 @@ img {
   padding: 10px;
   color: #ffffff;
   font-size: 1.125rem;
-  background: rgba(0,0,0,.1);
+  background: rgba(0, 0, 0, 0.1);
   border-radius: 5px;
   transition: 0.2s ease-out;
 }
 
 .header nav a:hover {
-  background: rgba(0,0,0,.5);
+  background: rgba(0, 0, 0, 0.5);
 }
 
 .header li + li {
@@ -105,7 +106,7 @@ img {
     margin-bottom: 20px;
   }
 
-  .header nav a  {
+  .header nav a {
     font-size: 1rem;
   }
 
@@ -130,12 +131,12 @@ img {
   background: #ffffff;
   padding: 20px;
   border-radius: 5px;
-  box-shadow: 5px 5px 15px 0px rgba(44, 44, 44, .15);
+  box-shadow: 5px 5px 15px 0px rgba(44, 44, 44, 0.15);
   transition: 0.2s ease-out;
 }
 
 .sidenav li a:hover {
-  background: #B07DFB;
+  background: #b07dfb;
 }
 
 @keyframes seta {
@@ -153,16 +154,15 @@ img {
     -webkit-overflow-scrolling: touch;
     -ms-overflow-style: -ms-autohiding-scrollbar;
     position: relative;
-    
   }
 
   .sidenav::after {
-    content: '→';
+    content: "→";
     position: absolute;
     top: 5px;
     right: 30px;
     color: rgba(0, 0, 0, 0.3);
-    animation: seta .5s ease-in 0s infinite alternate;
+    animation: seta 0.5s ease-in 0s infinite alternate;
   }
 
   .sidenav ul {
@@ -172,7 +172,7 @@ img {
   .sidenav li {
     flex: 1 0 60px;
   }
-  
+
   .sidenav {
     padding: 0 30px;
   }
@@ -192,6 +192,12 @@ img {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 30px;
+}
+
+@media (max-width: 600px) {
+  .content {
+    grid-template-columns: auto;
+  }
 }
 
 .col-wide {
@@ -216,12 +222,12 @@ p {
   color: rgba(0, 0, 0, 0.7);
 }
 
-.informacoes p + p{
+.informacoes p + p {
   margin-top: 30px;
 }
 
 .titulo {
-  color: #B07DFB;
+  color: #b07dfb;
 }
 
 .titulo h1 {
@@ -245,9 +251,9 @@ p {
 .caracteristicas > div {
   width: 80px;
   text-align: center;
-  background: linear-gradient(135deg, #8844ee, #B07DFB);
+  background: linear-gradient(135deg, #8844ee, #b07dfb);
   border-radius: 5px;
-  box-shadow: 5px 5px 15px 0px rgba(44, 44, 44, .15);
+  box-shadow: 5px 5px 15px 0px rgba(44, 44, 44, 0.15);
   position: relative;
 }
 
@@ -257,7 +263,7 @@ p {
 
 .caracteristicas span {
   display: block;
-  color: #B07DFB;
+  color: #b07dfb;
 }
 
 .numero {
@@ -276,15 +282,16 @@ p {
 
 .destaque {
   font-size: 0.875rem;
-  color: #B07DFB;
+  color: #b07dfb;
   max-width: 16rem;
 }
 
-.citacao, .atributos {
+.citacao,
+.atributos {
   padding: 30px;
   border-radius: 5px;
-  box-shadow: 5px 5px 15px 0px rgba(44, 44, 44, .15);
-  background: linear-gradient(135deg, #8844ee, #B07DFB);
+  box-shadow: 5px 5px 15px 0px rgba(44, 44, 44, 0.15);
+  background: linear-gradient(135deg, #8844ee, #b07dfb);
   align-self: start;
 }
 
@@ -302,11 +309,10 @@ p {
   font-family: Courier, monospace;
   font-size: 1.125rem;
   padding: 15px;
- 
 }
 
 .atributos li + li {
-  border-top: 2px solid #B07DFB;
+  border-top: 2px solid #b07dfb;
 }
 
 /* Anúncios */
@@ -318,17 +324,18 @@ p {
   align-content: start;
   padding: 30px;
   gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
 }
 
 /* Footer */
 
 .footer {
   grid-area: footer;
-  background: linear-gradient(135deg, #8844ee, #B07DFB);
+  background: linear-gradient(135deg, #8844ee, #b07dfb);
 }
 
 .footer p {
-  color: #FFFFFF;
+  color: #ffffff;
   text-align: center;
   padding: 30px;
 }
